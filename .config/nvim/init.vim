@@ -12,6 +12,14 @@ Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'dhruvasagar/vim-table-mode'
 
+Plug 'flazz/vim-colorschemes'
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'chriskempson/base16-vim'
+
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
+
 " Any valid git URL is allowed
 "Plug 'https://github.com/junegunn/vim-github-dashboard.git'
 
@@ -19,7 +27,7 @@ Plug 'dhruvasagar/vim-table-mode'
 "Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 
 " On-demand loading
-"Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'scrooloose/nerdtree' , { 'on':  'NERDTreeToggle' }
 "Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 
 " Using a non-master branch
@@ -39,3 +47,7 @@ Plug 'dhruvasagar/vim-table-mode'
 
 " Initialize plugin system
 call plug#end()
+
+set background=dark
+colorscheme PaperColor
+let g:airline_theme="simple"
