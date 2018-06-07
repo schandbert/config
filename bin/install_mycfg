@@ -1,0 +1,5 @@
+#! /bin/sh
+
+git clone --separate-git-dir=~/.mycfg https://github.com/schandbert/config /tmp/mycfg
+mv /tmp/mycfg/.git ~/.mycfg/
+rm -r /tmp/mycfg

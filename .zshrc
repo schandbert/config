@@ -1,4 +1,3 @@
-
 source /usr/share/zsh/share/antigen.zsh
 
 # Load the oh-my-zsh's library.
@@ -36,3 +35,5 @@ antigen apply
 BROWSER=/usr/bin/firefox
 EDITOR=/usr/bin/nvim
 
+PATH=~/bin:$PATH
+alias cfg='/usr/bin/git --git-dir=$HOME/.mycfg/ --work-tree=$HOME'
