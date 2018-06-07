@@ -12,9 +12,14 @@ Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'dhruvasagar/vim-table-mode'
 
-Plug 'flazz/vim-colorschemes'
+"Plug 'flazz/vim-colorschemes'
+Plug 'dracula/vim'
+Plug 'morhetz/gruvbox'
 Plug 'NLKNguyen/papercolor-theme'
-Plug 'chriskempson/base16-vim'
+Plug 'sonph/onehalf', {'rtp': 'vim/'}
+Plug 'lifepillar/vim-solarized8'
+Plug 'nanotech/jellybeans.vim'
+
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -48,6 +53,15 @@ Plug 'scrooloose/nerdtree' , { 'on':  'NERDTreeToggle' }
 " Initialize plugin system
 call plug#end()
 
+set termguicolors
+
+" gruvbox
+"set background=dark
+"let g:gruvbox_contrast_dark="hard"
+"colorscheme gruvbox
+"let g:airline_theme="gruvbox"
+
+" papercolor theme
 set background=dark
 colorscheme PaperColor
 let g:airline_theme="simple"
