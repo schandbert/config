@@ -36,4 +36,7 @@ BROWSER=/usr/bin/firefox
 EDITOR=/usr/bin/nvim
 
 PATH=~/bin:$PATH
+# special git for dotfiles
 alias cfg='/usr/bin/git --git-dir=$HOME/.mycfg/ --work-tree=$HOME'
+# nicer ls
+alias ls='ls --color -h --group-directories-first'
