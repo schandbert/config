@@ -65,3 +65,13 @@ set termguicolors
 set background=dark
 colorscheme PaperColor
 let g:airline_theme="simple"
+
+" markdown
+let g:vim_markdown_folding_level = 2
+
+" This feature allows the ge command to follow named anchors in links of the form file#anchor or just #anchor, where file may omit the .md extension as usual. Two variables control its operation:
+let g:vim_markdown_follow_anchor = 1
+
+"vim-markdown automatically insert the indent. By default, the number of spaces of indent is 4. If you'd like to change the number as 2, just write:
+let g:vim_markdown_new_list_item_indent = 2 
+
