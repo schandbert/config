@@ -42,5 +42,5 @@ alias cfg='/usr/bin/git --git-dir=$HOME/.mycfg/ --work-tree=$HOME'
 alias ls='ls --color -h --group-directories-first'
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="~/.sdkman"
-[[ -s "~/.sdkman/bin/sdkman-init.sh" ]] && source "~/.sdkman/bin/sdkman-init.sh"
+export SDKMAN_DIR=~/.sdkman
+[[ -s $SDKMAN_DIR/bin/sdkman-init.sh ]] && source $SDKMAN_DIR/bin/sdkman-init.sh
