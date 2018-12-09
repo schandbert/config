@@ -36,6 +36,9 @@ BROWSER=/usr/bin/firefox
 EDITOR=/usr/bin/nvim
 
 PATH=~/bin:$PATH
+
+# repair Meta-.
+bindkey '\e.' insert-last-word
 # special git for dotfiles
 alias cfg='/usr/bin/git --git-dir=$HOME/.mycfg/ --work-tree=$HOME'
 # nicer ls
