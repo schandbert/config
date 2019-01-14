@@ -8,6 +8,9 @@ call plug#begin('~/.local/share/nvim/plugged')
 " Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
 Plug 'junegunn/vim-easy-align'
 
+" ALE lint https://github.com/w0rp/ale
+Plug 'w0rp/ale'
+
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'dhruvasagar/vim-table-mode'
@@ -19,7 +22,6 @@ Plug 'NLKNguyen/papercolor-theme'
 Plug 'sonph/onehalf', {'rtp': 'vim/'}
 Plug 'lifepillar/vim-solarized8'
 Plug 'nanotech/jellybeans.vim'
-
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
