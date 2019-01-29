@@ -1,0 +1,22 @@
+#!/bin/bash 
+#vi:ts=4:sw=4
+tty=$1
+# read tty pids sorted by start time into array
+readarray pids <<< $(ps -t $tty --sort=start_time -o pid=)
+
+# isolate last pid and remove from array
+last_pid=${pids[-1]}
+unset pids[-1]
+
+out=""
+# iterate parent pids
+for e in ${pids[@]}; do
+	if ((${#out} > 0)); then out+=" ▶ "; fi
+	# save command name to output
+	out+="$(ps --pid $e -o comm=)"
+done
+
+# save full command including arguments of last pid to output
+if ((${#out} > 0)); then out+=" ▶ "; fi
+out+="$(ps --pid $last_pid -o args=)"
+echo $out
