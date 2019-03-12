@@ -11,9 +11,12 @@ antigen bundle httpie
 antigen bundle mvn
 antigen bundle pip
 antigen bundle python
+antigen bundle systemd
 #antigen bundle tmux
 #ZSH_TMUX_AUTOSTART=false
+antigen bundle vagrant
 antigen bundle vi-mode
+antigen bundle web-search
 
 # Syntax highlighting bundle.
 antigen bundle zsh-users/zsh-syntax-highlighting

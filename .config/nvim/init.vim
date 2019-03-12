@@ -15,6 +15,8 @@ Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'dhruvasagar/vim-table-mode'
 
+Plug 'sk1418/HowMuch'
+
 "Plug 'flazz/vim-colorschemes'
 Plug 'dracula/vim'
 Plug 'morhetz/gruvbox'
