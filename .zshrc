@@ -18,8 +18,18 @@ antigen bundle vagrant
 antigen bundle vi-mode
 antigen bundle web-search
 
+# suggestions
+antigen bundle zsh-users/zsh-autosuggestions
+# auto suggest with shift+tab
+bindkey '^[[Z'  autosuggest-accept
+
 # Syntax highlighting bundle.
 antigen bundle zsh-users/zsh-syntax-highlighting
+# time for long running commands
+antigen bundle popstas/zsh-command-time
+# reminder for configured aliasses
+antigen bundle MichaelAquilina/zsh-you-should-use
+
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 
 # Fish-like auto suggestions
