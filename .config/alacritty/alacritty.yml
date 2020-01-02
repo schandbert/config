@@ -91,6 +91,9 @@ tabspaces: 8
 
 # Font configuration (changes require restart)
 font:
+  normal:
+      #family: MesloLGS Nerd Font Mono
+    family: SauceCodePro Nerd Font Mono
   # Normal (roman) font face
   #normal:
     # Font family
