@@ -5,9 +5,6 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-#source /usr/share/zsh/share/antigen.zsh
-#
-#
 autoload -Uz compinit
 compinit
 
@@ -37,28 +34,8 @@ antibody bundle < ~/.zsh_plugins
 # auto suggest with shift+tab
 bindkey '^[[Z'  autosuggest-accept
 #
-## Syntax highlighting bundle.
-#antigen bundle zsh-users/zsh-syntax-highlighting
-## time for long running commands
-#antigen bundle popstas/zsh-command-time
-## reminder for configured aliasses
-#antigen bundle MichaelAquilina/zsh-you-should-use
-#
 #ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 #
-## Fish-like auto suggestions
-## antigen bundle zsh-users/zsh-autosuggestions
-##
-## Extra zsh completions
-#antigen bundle zsh-users/zsh-completions
-#
-## Load the theme.
-##antigen theme robbyrussell
-#antigen theme ys
-#
-## Tell Antigen that you're done.
-#antigen apply
-
 # repair Meta-.
 bindkey '\e.' insert-last-word
 # special git for dotfiles
