@@ -41,7 +41,10 @@ bindkey '\e.' insert-last-word
 # special git for dotfiles
 alias cfg='/usr/bin/git --git-dir=$HOME/.mycfg/ --work-tree=$HOME'
 # nicer ls
-alias ls='ls --color -h --group-directories-first'
+if [[ $OSTYPE == "darwin"* ]]; then
+else
+    alias ls='ls --color -h --group-directories-first'
+fi
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR=~/.sdkman
