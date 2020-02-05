@@ -1,10 +1,11 @@
+export PATH=~/dev/bin:$PATH
+
 if [[ $OSTYPE == "darwin"* ]]; then
-  PATH=~/dev/bin:$PATH
-  BROWSER=/usr/bin/firefox
-  EDITOR=/usr/bin/nvim
+  export BROWSER=/usr/local/bin/firefox
+  export EDITOR=/usr/local/bin/nvim
 else
-  PATH=~/bin:$PATH
-  BROWSER=/usr/local/bin/firefox
-  EDITOR=/usr/local/bin/nvim
+  export BROWSER=/usr/bin/firefox
+  export EDITOR=/usr/bin/nvim
 fi
+
 echo sourced .zshenv
