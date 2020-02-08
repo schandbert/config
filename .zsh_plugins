@@ -1,57 +1,11 @@
-
-## Load the oh-my-zsh's library.
-#antigen use oh-my-zsh
-#
-## Bundles from the default repo (robbyrussell's oh-my-zsh).
-#antigen bundle docker
-#antigen bundle git
-#antigen bundle gradle
-#antigen bundle httpie
-#antigen bundle mvn
-#antigen bundle pip
-#antigen bundle python
-#antigen bundle systemd
-##antigen bundle tmux
-##ZSH_TMUX_AUTOSTART=false
-#antigen bundle vagrant
-#antigen bundle vi-mode
-#antigen bundle web-search
-#
-## suggestions
-#antigen bundle zsh-users/zsh-autosuggestions
-## auto suggest with shift+tab
-#bindkey '^[[Z'  autosuggest-accept
-#
-## Syntax highlighting bundle.
-#antigen bundle zsh-users/zsh-syntax-highlighting
-## time for long running commands
-#antigen bundle popstas/zsh-command-time
-## reminder for configured aliasses
-#antigen bundle MichaelAquilina/zsh-you-should-use
-#
-#ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
-#
-## Fish-like auto suggestions
-## antigen bundle zsh-users/zsh-autosuggestions
-##
-## Extra zsh completions
-#antigen bundle zsh-users/zsh-completions
-#
-## Load the theme.
-##antigen theme robbyrussell
-#antigen theme ys
-#
-## Tell Antigen that you're done.
-#antigen apply
-#
-
 zsh-users/zsh-completions
 zsh-users/zsh-syntax-highlighting
 zsh-users/zsh-autosuggestions
-#zsh-users/zsh-history-substring-search
+MichaelAquilina/zsh-you-should-use
 
 robbyrussell/oh-my-zsh path:lib
 robbyrussell/oh-my-zsh path:plugins/docker
+robbyrussell/oh-my-zsh path:plugins/globalias
 robbyrussell/oh-my-zsh path:plugins/gradle
 robbyrussell/oh-my-zsh path:plugins/httpie
 robbyrussell/oh-my-zsh path:plugins/mvn
