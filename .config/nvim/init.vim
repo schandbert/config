@@ -13,7 +13,7 @@ Plug 'dense-analysis/ale'
 Plug 'tpope/vim-surround'
 
 " Plug 'godlygeek/tabular'
-" Plug 'dhruvasagar/vim-table-mode'
+Plug 'dhruvasagar/vim-table-mode'
 " Plug 'sk1418/HowMuch'
 
 " Color Themes
