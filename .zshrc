@@ -50,6 +50,9 @@ fi
 # open DSA book
 alias dsab='find ~/Documents/Bücher/DSA -name "*pdf" | fzf | xargs -i xdg-open {}'
 
+# fuzzy seach in history
+alias h='history | fzf --tac --no-sort'
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR=~/.sdkman
 [[ -s $SDKMAN_DIR/bin/sdkman-init.sh ]] && source $SDKMAN_DIR/bin/sdkman-init.sh

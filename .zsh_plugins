@@ -1,11 +1,12 @@
 zsh-users/zsh-completions
 zsh-users/zsh-syntax-highlighting
 zsh-users/zsh-autosuggestions
+
 MichaelAquilina/zsh-you-should-use
 
 robbyrussell/oh-my-zsh path:lib
 robbyrussell/oh-my-zsh path:plugins/docker
-robbyrussell/oh-my-zsh path:plugins/globalias
+#robbyrussell/oh-my-zsh path:plugins/globalias
 robbyrussell/oh-my-zsh path:plugins/gradle
 robbyrussell/oh-my-zsh path:plugins/httpie
 robbyrussell/oh-my-zsh path:plugins/mvn
