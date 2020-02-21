@@ -1,3 +1,6 @@
+HISTSIZE=1000000
+SAVEHIST=$HISTSIZE
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block, everything else may go below.
@@ -50,8 +53,12 @@ fi
 # open DSA book
 alias dsab='find ~/Documents/Bücher/DSA -name "*pdf" | fzf | xargs -i xdg-open {}'
 
-# fuzzy seach in history
-alias h='history | fzf --tac --no-sort'
+# fuzzy seach in history (cut line numbers)
+alias h='history | cut -c 8- | fzf --tac --no-sort'
+
+# translate
+alias ted='trans -s en -t de'
+alias tde='trans -s de -t en'
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR=~/.sdkman
