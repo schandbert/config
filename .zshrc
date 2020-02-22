@@ -53,8 +53,10 @@ fi
 # open DSA book
 alias dsab='find ~/Documents/Bücher/DSA -name "*pdf" | fzf | xargs -i xdg-open {}'
 
-# fuzzy seach in history (cut line numbers)
-alias h='history | cut -c 8- | fzf --tac --no-sort'
+# fh - repeat history
+fh() {
+  print -z $( ([ -n "$ZSH_NAME" ] && fc -l 1 || history) | fzf --no-sort --tac --height=50% | sed -r 's/ *[0-9]*\*? *//' | sed -r 's/\\/\\\\/g')
+}
 
 # translate
 alias ted='trans -s en -t de'
