@@ -64,6 +64,9 @@ fh() {
 alias ted='trans -s en -t de'
 alias tde='trans -s de -t en'
 
+# Termux proot archlinux
+alias proot-run="proot-distro login archlinux --termux-home --"
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR=~/.sdkman
 [[ -s $SDKMAN_DIR/bin/sdkman-init.sh ]] && source $SDKMAN_DIR/bin/sdkman-init.sh
