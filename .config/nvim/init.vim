@@ -8,6 +8,9 @@ call plug#begin('~/.local/share/nvim/plugged')
 " Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
 Plug 'junegunn/vim-easy-align'
 
+" Voom outliner
+Plug 'vim-voom/VOoM'
+
 " ALE lint https://github.com/w0rp/ale
 Plug 'dense-analysis/ale'
 Plug 'tpope/vim-surround'
