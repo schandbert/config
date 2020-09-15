@@ -1,11 +1,16 @@
 autoload -Uz compinit && compinit
+
 source <(antibody init)
+ZSH="$(antibody home)/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SLASH-oh-my-zsh"
+antibody bundle robbyrussell/oh-my-zsh
+
 antibody bundle < ~/.zsh_plugins
 if [[ $OSTYPE == "darwin"* ]]; then
   # for some reason this is needed to load the docker plugin on MacOS
   fpath+=$(antibody path robbyrussell/oh-my-zsh)/plugins/docker
   autoload -Uz compinit && compinit
 fi
+
 
 HISTSIZE=1000000
 SAVEHIST=$HISTSIZE
@@ -55,14 +60,20 @@ fi
 # open DSA book
 alias dsab='find ~/Documents/Bücher/DSA -name "*pdf" | fzf | xargs -i xdg-open {}'
 
+# jsonschema validation
+alias justify=~/dev/bin/justify-cli/justify
+
 # fh - repeat history
 fh() {
-  print -z $( ([ -n "$ZSH_NAME" ] && fc -l 1 || history) | fzf --no-sort --tac --height=50% | sed -r 's/ *[0-9]*\*? *//' | sed -r 's/\\/\\\\/g')
+  print -z $( ([ -n "$ZSH_NAME" ] && fc -l 1 || history) | fzf --no-sort --tac --height=50% | sed -E 's/ *[0-9]*\*? *//' | sed -E 's/\\/\\\\/g')
 }
 
 # translate
 alias ted='trans -s en -t de'
 alias tde='trans -s de -t en'
+
+# Termux proot archlinux
+alias proot-run="proot-distro login archlinux --termux-home --"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR=~/.sdkman
