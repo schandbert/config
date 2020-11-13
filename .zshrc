@@ -72,6 +72,9 @@ fh() {
 alias ted='trans -s en -t de'
 alias tde='trans -s de -t en'
 
+# ripgrep multiline with dot-all semantics enabled
+alias rgm='rg --multiline --multiline-dotall'
+
 # Termux proot archlinux
 alias proot-run="proot-distro login archlinux --termux-home --"
 
