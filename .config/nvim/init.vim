@@ -19,6 +19,9 @@ Plug 'tpope/vim-surround'
 Plug 'dhruvasagar/vim-table-mode'
 " Plug 'sk1418/HowMuch'
 
+" Fugitive is the premier Vim plugin for Git.
+Plug 'tpope/vim-fugitive'
+
 " Color Themes
 Plug 'flazz/vim-colorschemes'
 Plug 'NLKNguyen/papercolor-theme'
