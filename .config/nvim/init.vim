@@ -33,8 +33,14 @@ Plug 'itchyny/lightline.vim'
 " On-demand loading
 Plug 'scrooloose/nerdtree' , { 'on':  'NERDTreeToggle' }
 
+" Tidal cycles
+Plug 'tidalcycles/vim-tidal'
+
 " Initialize plugin system
 call plug#end()
+
+" local leader
+let maplocalleader = ';'
 
 " Indent
 set tabstop =4
@@ -60,3 +66,6 @@ let g:ale_fixers = {
 \   'xml': ['remove_trailing_lines', 'trim_whitespace', 'xmllint'],
 \   'javascript': ['remove_trailing_lines', 'trim_whitespace', 'eslint']
 \}
+
+" Tidal Cycles
+let g:tidal_target = 'terminal'
