@@ -5,6 +5,10 @@ ZSH="$(antibody home)/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SL
 antibody bundle robbyrussell/oh-my-zsh
 
 antibody bundle < ~/.zsh_plugins
+
+# leave mvnd for maven daemon
+unalias mvnd
+
 if [[ $OSTYPE == "darwin"* ]]; then
   # for some reason this is needed to load the docker plugin on MacOS
   fpath+=$(antibody path robbyrussell/oh-my-zsh)/plugins/docker
