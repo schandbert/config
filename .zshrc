@@ -82,6 +82,10 @@ alias rgm='rg --multiline --multiline-dotall'
 # Termux proot archlinux
 alias proot-run="proot-distro login archlinux --termux-home --"
 
+# URL encode/decode
+alias urldecode='python3 -c "import sys, urllib.parse as ul; print(ul.unquote_plus(sys.argv[1]))"'
+alias urlencode='python3 -c "import sys, urllib.parse as ul; print (ul.quote_plus(sys.argv[1]))"'
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR=~/.sdkman
 [[ -s $SDKMAN_DIR/bin/sdkman-init.sh ]] && source $SDKMAN_DIR/bin/sdkman-init.sh
@@ -94,3 +98,16 @@ if [ -f '/home/schandbert/bin/google-cloud-sdk/path.zsh.inc' ]; then . '/home/sc
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/schandbert/bin/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/schandbert/bin/google-cloud-sdk/completion.zsh.inc'; fi
+
+# Hostname completion
+[ -r ~/.ssh/known_hosts ] && ssh_hosts=(${${${${(f)"$(<$HOME/.ssh/known_hosts)"}:#[\|]*}%%\ *}%%,*}) || ssh_hosts=()
+[ -r /etc/hosts ] && : ${(A)etc_hosts:=${(s: :)${(ps:\t:)${${(f)~~"$(</etc/hosts)"}%%\#*}##[:blank:]#[^[:blank:]]#}}} || etc_hosts=()
+[ -r ~/.zsh_hosts ] && custom_hosts=($(cat ~/.zsh_hosts))
+hosts=(
+  "$ssh_hosts[@]"
+  "$etc_hosts[@]"
+  "$custom_hosts[@]"
+  "$HOST"
+  localhost
+)
+zstyle ':completion:(ssh|rsync|http):hosts' hosts $hosts

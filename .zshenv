@@ -4,6 +4,7 @@ export PATH=~/bin:$PATH
 if [[ $OSTYPE == "darwin"* ]]; then
   export BROWSER=/usr/local/bin/firefox
   export EDITOR=/usr/local/bin/nvim
+  export PATH=/usr/local/sbin:$PATH
   # may be needed for tcpdump
   # export PATH=/usr/local/opt/libpcap/bin:$PATH
 else
